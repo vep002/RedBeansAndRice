@@ -14,4 +14,11 @@
     <%= item.amount %>
   </p>
 
+  <p>
+  <strong>Location:</strong>
+  <% for location in item.locations  %>
+  <%= location.name %><br />
+<% end %>
+</p>
+
 </div>

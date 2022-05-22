@@ -5,16 +5,6 @@
   </p>
 
   <p>
-    <strong>Longitude:</strong>
-    <%= location.longitude %>
-  </p>
-
-  <p>
-    <strong>Latitude:</strong>
-    <%= location.latitude %>
-  </p>
-
-  <p>
     <strong>Street:</strong>
     <%= location.street %>
   </p>
@@ -27,6 +17,13 @@
   <p>
     <strong>State:</strong>
     <%= location.state %>
+  </p>
+
+  <p>
+    <strong>Items:</strong>
+    <% for item in location.items  %>
+      <%= item.name %><br />
+    <% end %>
   </p>
 
 </div>
