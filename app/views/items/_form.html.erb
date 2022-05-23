@@ -30,10 +30,7 @@
 
   <p>
     <%= form.label :locations %><br />
-    <% for location in Location.all %>
-      <%= check_box_tag "location[location_ids][]", location.id, @item.locations.include?(location) %>
-      <%=h location.name %><br />
-    <% end %>
+      <%= form.collection_check_boxes :location_ids, Location.all, :id, :name %>
   </p>
 
   <div>
