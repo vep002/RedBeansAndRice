@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: %i[ show edit update destroy ]
+  
 
   # GET /items or /items.json
   def index
@@ -20,8 +21,11 @@ class ItemsController < ApplicationController
   end
 
   # POST /items or /items.json
+
   def create
     @item = Item.new(item_params)
+    # @location = Location.find(params[:item][:location_ids])
+    # @item.stocks.create( :location_id => @location.id )
 
     respond_to do |format|
       if @item.save
@@ -61,6 +65,10 @@ class ItemsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_item
       @item = Item.find(params[:id])
+    end
+
+    def set_location
+      @location = Location.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
