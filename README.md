@@ -20,7 +20,7 @@ open a browser and go to http://localhost:3000/
 
 To run this application in replit:
 
-simply follow this link: https://shopifyinternchallenge.vep002.repl.co/
+simply follow this link: https://replit.com/@vep002/shopifyinternchallenge#app/controllers/application_controller.rb and click "Run"
 
 How the application works:
 Click "New Item" to add an item. Fill in the name, a description of the item, and select an amount. If there are no existing locations, you will not yet be able to select a location for the item. Click "Back to Items" to see the list of items. 
